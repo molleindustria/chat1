@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>P5 Chat</title>
+    <!-- This is a standard p5.js index, NOTE the p5.dom.min.js -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+</head>
+
+<body>
+
+    <div id="canvas-container"></div>
+    <!-- onsubmit is what happens when return is pressed-->
+    <form action="" onsubmit="return getInputValue()">
+        <input id="chatField" autocomplete="off" />
+        <!-- call the function below on button press-->
+        <button type="button" onclick="getInputValue();">TALK</button>
+    </form>
+
+    <script>
+        function getInputValue() {
+            // Selecting the input element and get its value 
+            var inputVal = document.getElementById("chatField").value;
+            //sending it to the talk function in sketch
+            talk(inputVal);
+            document.getElementById("chatField").value = "";
+            //prevent page from refreshing (default form behavior)
+            return false;
+        }
+    </script>
+</body>
+
+</html>

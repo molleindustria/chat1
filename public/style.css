@@ -1,0 +1,49 @@
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+    /*fixed width canvas*/
+    width: 800px;
+    margin: auto;
+}
+
+canvas {
+  display: block;
+  /*prevents double click selection*/
+  -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {  font: Helvetica, Arial; }
+form { display: inline-block; background: #000; width: 800px;padding:0;margin:0px;}
+form input { 
+    display: inline-block;
+    border: none;
+    font-size: 20px;
+    border: #000;
+    padding: 4px; 
+    margin:4px;
+    width: 670px; 
+    }
+form button { 
+    display: inline-block;
+    border: none; 
+    margin:0px; 
+    padding:4px;
+    text-align: center; 
+    font-size: 20px; 
+    width:100px;
+    background: rgb(130, 224, 255); 
+    
+    
+    /*padding-left:0px; 
+    padding-right: 0px;
+    padding-top: 10px; 
+    padding-bottom:10px;*/
+}
+form button:hover { background:rgb(151, 245, 154)}
